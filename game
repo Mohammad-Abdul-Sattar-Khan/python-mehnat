@@ -1,0 +1,34 @@
+# give greating and choice to start
+# cmpare it randomly with the system option
+# give output for losig and wining 
+
+import random
+options = ["rock", "paper", "scissors"]
+
+print("Welcome")
+print("Type rock, paper, or scissors to start.")
+print("Type quit to end the game.")
+
+while True:
+    user = input("Your choice: ").lower()
+    
+    if user == "quit":
+        print("Goodbye")
+        break
+
+    if user not in options:
+        print("sorry. Try again")
+        continue
+
+    system = random.choice(options)
+    print(f"Computer chose: {system}")
+
+    match (user, system):
+        case (a, b) if a == b:
+            print("It's a tie!\n")
+
+        case ("rock", "scissors") | ("paper", "rock") | ("scissors", "paper"):
+            print("You win!\n")
+
+        case ("rock", "paper") | ("paper", "scissors") | ("scissors", "rock"):
+            print("You lose!\n")

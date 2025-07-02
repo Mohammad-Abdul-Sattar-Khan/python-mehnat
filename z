@@ -1,0 +1,47 @@
+mobles = ["car", "jeep", "bike"]
+for x in mobles:
+  print(x)
+
+for x in "jeep":
+  print(x)
+
+  mobles = ["car", "jeep", "bike"]
+for x in mobles:
+  print(x)
+  if x == "jeep":
+    break
+
+mobles = ["car", "jeep", "bike"]
+for x in mobles:
+  if x == "jeep":
+    break
+  print(x)
+
+mobles = ["car", "jeep", "bike"]
+for x in mobles:
+  if x == "jeep":
+    continue
+  print(x)
+
+for x in range(6):
+  print(x)
+
+  for x in range(2, 6):
+      print(x)
+ 
+for x in range(2, 30, 3):
+  print(x)
+
+for x in range(6):
+  if x == 3: break
+  print(x)
+else:
+  print("Finally finished!")
+
+adj = ["red", "big", "tasty"]
+mobles = ["car", "jeep", "bike"]
+
+for x in adj:
+  for y in mobles:
+    print(x, y)
+

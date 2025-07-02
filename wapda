@@ -1,0 +1,48 @@
+# WAPDA Electricity Billing System
+# 1. Ask user to enter number of units
+# 2. Calculate energy charges
+# 3. Calculate GST (17% of energy charges)
+# 4. Add fixed meter charge
+# 5. Calculate total bill
+# 6. Print the bill
+
+while True:
+    print("\n--- WAPDA BILL SYSTEM ---")
+    print("1. Generate Bill")
+    print("2. Exit")
+
+    choice = input("Enter your choice (1 or 2): ")
+
+    match choice:
+        case "1":
+           
+            units = int(input("Enter number of units used: "))
+
+            if units <= 100:
+                energy_charges = units * 5
+            elif units <= 200:
+                energy_charges = units  * 10
+            else:
+                energy_charges =  units * 15
+
+           
+            gst = energy_charges * 17 / 100
+
+            meter_charge = 150
+
+            total = energy_charges + gst + meter_charge
+
+            print("\n--- BILL DETAILS ---")
+            print("Units Used     :", units)
+            print("Energy Charges : Rs.", energy_charges)
+            print("GST (17%)      : Rs.", gst)
+            print("Meter Charges  : Rs.", meter_charge)
+            print("Total Bill     : Rs.", total)
+            print("---------------------")
+
+        case "2":
+            print("Thank you! Exiting...")
+            break
+
+        case _:
+            print("Invalid choice. Please try again.")

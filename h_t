@@ -1,0 +1,23 @@
+import random
+
+print("🪙 Welcome to the Coin Toss Game!")
+
+while True:
+    # Show menu options
+    print("\n--- Menu ---")
+    print("1. Toss the Coin")
+    print("2. Exit")
+
+    # Take user input
+    choice = input("Enter your choice (1 or 2): ")
+
+    match choice:
+        case "1":
+            # Perform coin toss
+            toss = random.choice(["Heads", "Tails"])
+            print("The coin landed on:", toss)
+        case "2":
+            print("Thanks for playing! 👋")
+            break
+        case _:
+            print("Invalid choice. Please enter 1 or 2.")

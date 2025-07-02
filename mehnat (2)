@@ -1,0 +1,21 @@
+figeres = [10, 20, 30, 40]
+total= sum(figeres)
+print(total)
+
+values = [12, 45, 2, 67, 34, 89]
+maximum = max(values)
+minimum = min(values)
+print("Max:", maximum)
+print("Min:", minimum)
+
+thislist = ['apple', 'banana', 'cherry']
+thislist.sort(reverse = True)
+print(thislist)
+
+colors = ['red', 'blue', 'red', 'green', 'blue', 'blue']
+count_blue = colors.count('blue')
+print(count_blue)
+
+data = []
+is_empty = len(data) == 0
+print(is_empty)

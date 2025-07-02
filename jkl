@@ -1,0 +1,32 @@
+x = 4 # is of type int
+x = "sally" # is of type str
+print(x)
+
+x = 5
+y = "john"
+print(type(x))
+print(type(y))
+
+x = "awesome"
+
+def myfunc():
+  x = "fantastic"
+  print("Python is " + x)
+
+x = "awesome"
+
+def myfunc():
+  x = "fantastic"
+  print("Python is " + x)
+
+myfunc()
+8
+print("Python is " + x)
+
+def myfunc():
+  global x
+  x = "fantastic"
+
+myfunc()
+
+print("Python is " + x)

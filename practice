@@ -1,0 +1,23 @@
+print("Hello, World!")
+
+a = int(250)
+b = int(250)
+print("Sum:", a + b)
+
+x = 5.7
+print(type(x))
+
+s = input("mohammad Abdul sattar khan")
+print(s[::-1])
+
+c = [3, 6, 1, 8]
+total = 0
+for num in c:
+    total += num
+print("Sum:", total)
+
+t = int("50")
+if num % 2 == 0:
+    print("Even")
+else:
+    print("Odd")

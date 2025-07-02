@@ -1,0 +1,202 @@
+values = [12, 45, 2, 67, 34, 89]
+maximum = values[0]
+minimum = values[0]
+for v in values:
+    if v > maximum:
+        maximum = v
+    if v < minimum:
+        minimum = v
+print("Max:", maximum)
+print("Min:", minimum)
+
+colors = ['red', 'blue', 'red', 'green', 'blue', 'blue']
+count_blue = 0
+for color in colors:
+    if color == 'blue':
+        count_blue = count_blue + 1
+print(count_blue)
+
+fruits = ['apple', 'banana', 'cherry']
+reversed_fruits = []
+i = len(fruits) - 1
+while i >= 0:
+    reversed_fruits.append(fruits[i])
+    i = i - 1
+print(reversed_fruits)
+
+data = []
+is_empty = True
+for item in data:
+    is_empty = False
+    break
+print(is_empty)
+
+nums = [1, 2, 2, 3, 4, 4, 5]
+unique_nums = []
+for num in nums:
+    found = False
+    for u in unique_nums:
+        if u == num:
+            found = True
+            break
+    if not found:
+        unique_nums.append(num)
+print(unique_nums)
+
+nums = [1, 2, 3, 4, 5, 6]
+squares = []
+for x in nums:
+    if x % 2 == 0:
+        squares.append(x * x)
+print(squares)
+
+list1 = ['a', 'b', 'c']
+list2 = [1, 2, 3]
+merged = []
+i = 0
+while i < len(list1) and i < len(list2):
+    merged.append(list1[i])
+    merged.append(list2[i])
+    i = i + 1
+print(merged)
+
+list1 = [10, 20, 30, 40, 50]
+n = 2
+rotated = []
+length = len(list1)
+i = length - n
+while i < length:
+    rotated.append(list1[i])
+    i = i + 1
+i = 0
+while i < length - n:
+    rotated.append(list1[i])
+    i = i + 1
+print(rotated)
+
+nums = [10, 20, 4, 45, 99]
+largest = nums[0]
+for num in nums:
+    if num > largest:
+        largest = num
+
+second_largest = None
+for num in nums:
+    if num != largest:
+        if (second_largest is None) or (num > second_largest):
+            second_largest = num
+print(second_largest)
+
+numbers = [12, 45, 2, 67, 34, 89]
+max_num = numbers[0]  # Start with first number
+min_num = numbers[0]  # Start with first number
+
+for num in numbers:
+    if num > max_num:
+        max_num = num  # Update max if larger found
+    if num < min_num:
+        min_num = num  # Update min if smaller found
+
+print("Maximum:", max_num)
+print("Minimum:", min_num)
+
+colors = ['red', 'blue', 'red', 'green', 'blue', 'blue']
+blue_count = 0
+
+for color in colors:
+    if color == 'blue':
+        blue_count += 1  # Simple counter increment
+
+print("Blue appears", blue_count, "times")
+
+fruits = ['apple', 'banana', 'cherry']
+reversed_list = []
+current_index = len(fruits) - 1  # Start from last index
+
+while current_index >= 0:
+    reversed_list.append(fruits[current_index])
+    current_index -= 1  # Move backward through list
+
+print("Reversed list:", reversed_list)
+
+data = []
+is_empty = True
+
+# If loop runs even once, list isn't empty
+for item in data:
+    is_empty = False
+    break  # Exit immediately after first item
+
+print("Is the list empty?", is_empty)
+
+numbers = [1, 2, 2, 3, 4, 4, 5]
+unique_numbers = []
+
+for num in numbers:
+    duplicate_found = False
+    for existing in unique_numbers:
+        if existing == num:
+            duplicate_found = True
+            break  # Stop checking once duplicate found
+    if not duplicate_found:
+        unique_numbers.append(num)  # Add if unique
+
+print("Unique numbers:", unique_numbers)
+
+numbers = [1, 2, 3, 4, 5, 6]
+squared_evens = []
+
+for num in numbers:
+    if num % 2 == 0:  # Check if even
+        squared_evens.append(num ** 2)  # Square even numbers
+
+print("Squared evens:", squared_evens)
+
+letters = ['a', 'b', 'c']
+numbers = [1, 2, 3]
+combined = []
+index = 0
+
+# Merge until shorter list ends
+while index < len(letters) and index < len(numbers):
+    combined.append(letters[index])
+    combined.append(numbers[index])
+    index += 1  # Move to next pair
+
+print("Merged list:", combined)
+
+original = [10, 20, 30, 40, 50]
+rotation = 2  # Number of elements to rotate
+rotated = []
+length = len(original)
+
+# Add elements from rotation point to end
+i = length - rotation
+while i < length:
+    rotated.append(original[i])
+    i += 1
+
+# Add remaining elements from start
+i = 0
+while i < length - rotation:
+    rotated.append(original[i])
+    i += 1
+
+print("Rotated list:", rotated)
+
+numbers = [10, 20, 4, 45, 99]
+largest = numbers[0]
+
+# First find largest number
+for num in numbers:
+    if num > largest:
+        largest = num
+
+# Now find largest number that's not the absolute largest
+second_largest = None
+for num in numbers:
+    if num != largest:
+        if second_largest is None or num > second_largest:
+            second_largest = num
+
+print("Second largest:", second_largest)

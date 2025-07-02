@@ -1,0 +1,37 @@
+while True:
+    
+    print("pa khair raghle zamung atte ta ")
+    item_list = []
+    total_price = 0
+    discount = 0
+    for item in range(3):
+        item = int(input (f"Price of item {item + 1}: "))
+        item_list.append(item)
+        
+    for item in range(len(item_list)):
+        total_price = item_list[item] + total_price
+
+    if total_price > 5000:
+        discount = total_price * 0.05
+        total_price = total_price - discount
+    elif total_price > 10000:
+        discount = total_price * 0.1
+        total_price = total_price - discount
+    else: 
+        print(" za mara soda sewa ka")
+
+    coupon = (input("ta sra coupan shta( oleka Ao ya Na ) "))
+    coupon_discount = total_price - 0
+    if coupon.lower() == "ao":
+     coupon_discount = 500
+     total_price = total_price - coupon_discount
+     print("wala ghariba")
+    else: 
+        coupon_discount = 0
+        print("za mara ")
+
+    print (f'''
+    discount          :Rs.{discount}
+    coupon discount  :Rs.{coupon_discount}
+    total           :Rs.{total_price}
+    ''')
